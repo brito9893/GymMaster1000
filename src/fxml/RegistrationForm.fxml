@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="295.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthenticationController">
+    <children>
+        <Pane layoutY="1.0" prefHeight="315.0" prefWidth="602.0">
+            <children>
+                <Button fx:id="cancelButton" layoutX="534.0" layoutY="277.0" mnemonicParsing="false"
+                        onAction="#backToLoginPage" text="Cancel"/>
+                <Button fx:id="submitButton" defaultButton="true" layoutX="463.0" layoutY="277.0"
+                        mnemonicParsing="false" onAction="#handleSubmitAction" text="Submit"/>
+                <Label layoutX="75.0" layoutY="71.0" text="Name*"/>
+                <Label layoutX="80.0" layoutY="118.0" text="Email*"/>
+                <Label layoutX="53.0" layoutY="204.0" text="Username*">
+                    <tooltip>
+                        <Tooltip text="Must have atleast 6 characters"/>
+                    </tooltip>
+                </Label>
+                <Label layoutX="315.0" layoutY="159.0" text="Password*">
+                    <tooltip>
+                        <Tooltip text="Must have atleast 6 characters, 1 letter and 1 number. Max.: 64 characters"/>
+                    </tooltip>
+                </Label>
+                <Label layoutX="321.0" layoutY="71.0" text="Address"/>
+                <Label layoutX="32.0" layoutY="159.0" text="Confirm Email*"/>
+                <Label layoutX="319.0" layoutY="118.0" text="Zip code"/>
+                <Label layoutX="201.0" layoutY="248.0" text="Birthday"/>
+                <TextField fx:id="nameInput" layoutX="117.0" layoutY="67.0" promptText="insert name"/>
+                <TextField fx:id="emailInput" layoutX="119.0" layoutY="114.0" promptText="insert email"/>
+                <TextField fx:id="emailVerificationInput" layoutX="117.0" layoutY="155.0" promptText="confirm email"/>
+                <TextField fx:id="usernameInput" layoutX="117.0" layoutY="201.0" promptText="enter username"/>
+                <TextField fx:id="addressInput" layoutX="378.0" layoutY="67.0" prefHeight="25.0" prefWidth="194.0"
+                           promptText="insert address"/>
+                <Group layoutY="4.0">
+                    <children>
+                        <Label layoutX="424.0" layoutY="114.0" text="-"/>
+                        <TextField fx:id="zipCode1" layoutX="378.0" layoutY="110.0" prefHeight="25.0" prefWidth="46.0"/>
+                        <TextField fx:id="zipCode2" layoutX="429.0" layoutY="110.0" prefHeight="25.0" prefWidth="36.0"/>
+                    </children>
+                </Group>
+                <PasswordField fx:id="passwordInput" layoutX="378.0" layoutY="155.0" promptText="insert password"/>
+                <PasswordField fx:id="passConfirm" layoutX="378.0" layoutY="196.0" promptText="confirm password"/>
+                <DatePicker fx:id="birthdayInput" layoutX="249.0" layoutY="244.0" prefHeight="25.0" prefWidth="149.0"
+                            promptText="select your birthday"/>
+                <Label layoutX="244.0" layoutY="14.0" text="Sign Up">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="276.0" layoutY="200.0" text="Repeat Password*"/>
+                <Label layoutX="14.0" layoutY="293.0" text="*Obligatory fields"/>
+                <Button fx:id="specs" layoutX="544.0" layoutY="155.0" mnemonicParsing="false" onAction="#showSpecs"
+                        prefHeight="25.0" prefWidth="51.0" text="Specs"/>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,8 @@
+.mainPageButton {
+    -fx-background-color: #9bffcc;
+    -fx-cursor: hand;
+}
+
+.everythingPane{
+    -fx-background-color: black;
+}

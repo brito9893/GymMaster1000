@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="everythingPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" stylesheets="@css/MainWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindow">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="794.0" prefWidth="1000.0">
+          <left>
+              <VBox alignment="TOP_CENTER" prefWidth="120.0" spacing="10.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                  <children>
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="Programs" textAlignment="CENTER" />
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="Workouts" textAlignment="CENTER" />
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="Exercises" textAlignment="CENTER" />
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="BMI Calculator" textAlignment="CENTER" />
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="Metabolic Rate Calculator" textAlignment="CENTER" wrapText="true" />
+                      <Button id="mainPageButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="110.0" styleClass="mainPageButton" text="Body Fat Calculator" textAlignment="CENTER" wrapText="true" />
+                  </children>
+                  <padding>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+                  <BorderPane.margin>
+                      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                  </BorderPane.margin>
+              </VBox>
+          </left>
+          <center>
+              <FlowPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </BorderPane.margin></FlowPane>
+          </center>
+          <top>
+              <GridPane fx:id="topGridPane" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+                      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="65.0" />
+                      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="65.0" />
+                      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="65.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                      <Label fx:id="currentTimeLabel" alignment="TOP_RIGHT" contentDisplay="CENTER" text="Label" textOverrun="WORD_ELLIPSIS" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                          <padding>
+                              <Insets bottom="8.0" left="8.0" right="12.0" top="12.0" />
+                          </padding>
+                          <font>
+                              <Font name="Arial Rounded MT Bold" size="16.0" />
+                          </font>
+                      </Label>
+                      <Button fx:id="settingsButton" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#openSettingsPage" text="Settings" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                      <Button fx:id="logOffButton" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#logOffAction" text="Log Off" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                      <Button fx:id="userButton" mnemonicParsing="false" text="Profile" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  </children>
+                  <padding>
+                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+               <BorderPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </BorderPane.margin>
+              </GridPane>
+          </top>
+      </BorderPane>
+   </children>
+</VBox>
